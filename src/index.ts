@@ -72,18 +72,28 @@ console.log(hello);
 // console.log(person.greet());
 
 
-interface people {
-  name:string;
-  age: number;
-}
-class Manager implements people{
-  name:string;
-  age:number;
+// interface people {
+//   name:string;
+//   age: number;
+// }
+// class Manager implements people{
+//   name:string;
+//   age:number;
 
-  constructor(name: string , age:number){
+//   constructor(name: string , age:number){
+//     this.name = name;
+//     this.age =age;
+//   }
+// }
+// let user = new Manager("aryan",21);
+// console.log(user.age)
+
+
+ //abstract class
+abstract class USer {
+  name :string;
+  constructor(name: string){
     this.name = name;
-    this.age =age;
   }
+  abstract greet : () => string;
 }
-let user = new Manager("aryan",21);
-console.log(user.age)
